@@ -24,10 +24,12 @@ public class HaikyDisplay extends Activity {
     
     public void onLoveButtonClicked(View view) {
     	TextView textView = (TextView) findViewById(R.id.haikuTextView);
-    	if (textView.getVisibility() == View.INVISIBLE) 
+	
+    	if (textView.getVisibility() == View.INVISIBLE) {
     			textView.setVisibility(View.VISIBLE);
-    	else
-    			textView.setVisibility(View.INVISIBLE);
+    	}
+    	else {
+    		textView.setVisibility(View.INVISIBLE);
+    	}
     }
-    
 }
