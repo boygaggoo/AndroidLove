@@ -3,6 +3,8 @@ package android.love;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
 public class HaikyDisplay extends Activity {
 
@@ -18,6 +20,14 @@ public class HaikyDisplay extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.haiky_display, menu);
         return true;
+    }
+    
+    public void onLoveButtonClicked(View view) {
+    	TextView textView = (TextView) findViewById(R.id.haikuTextView);
+    	if (textView.getVisibility() == View.INVISIBLE) 
+    			textView.setVisibility(View.VISIBLE);
+    	else
+    			textView.setVisibility(View.INVISIBLE);
     }
     
 }
